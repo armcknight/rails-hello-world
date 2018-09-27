@@ -14,9 +14,7 @@ rbenv exec rails new myapp --database=postgresql --skip-bundle --skip-git # we'l
 pushd myapp
 
 # install/package dependencies declared by rails in Gemfile
-rbenv exec bundle config --local path vendor/bundle
-rbenv exec bundle package
-echo "vendor/bundle/**/*" > .gitignore
+rbenv exec bundle package --path=vendor/bundle
 
 # create the “Hello world!” view/controller
 rbenv exec bundle exec rails generate controller welcome # we're now bundle exec'ing rails because it was installed via the Gemfile created with rails new ...
