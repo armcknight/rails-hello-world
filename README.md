@@ -58,7 +58,7 @@ popd
 ```sh
 heroku create # make sure your ‘heroku’ git remote points to the correct app's git url, like if there was a previous one
 git push heroku master
-open $HEROKU_RAILS_URL
+heroku open
 ```
 
 ## References
